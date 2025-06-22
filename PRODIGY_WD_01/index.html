@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="navbar">
+                <div class="logo"></div>
+
+                <ul class="navlist">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="hero">
+                <img src="images/products.png" alt="">
+                <div class="content">
+                    <h3>Organic</h3>
+                    <h1>Boston Round</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis maiores eveniet mollitia
+                        debitis quibusdam. Saepe a dicta, debitis delectus quod odio quo perspiciatis praesentium
+                        dolorem, deserunt dolores labore minus sint?</p>
+                    <button class="btn">Shop Now</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.navlist');
+
+    hamburger.addEventListener('click', () => {
+        navList.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    });
+</script>
+
+
+</body>
+
+</html>

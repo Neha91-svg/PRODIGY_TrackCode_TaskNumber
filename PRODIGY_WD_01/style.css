@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: linear-gradient(90deg, #b7b78a 50%, #3c6255 50%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #dddddd;
+    padding: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 50%;
+    border-right-color: transparent;
+    font-family: 'Arizonia', cursive;
+    position: relative;
+}
+
+.logo::before {
+    content: "Shopify";
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    white-space: nowrap;
+    left: 70px;
+    top: 15px;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navlist li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navlist a:hover {
+    color: #007BFF;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.hero img {
+    width: 45vw;
+    max-width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-left: 2px solid #3c6255;
+    padding: 15px;
+}
+
+.content h3 {
+    color: rgb(73, 73, 73);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.content h1 {
+    color: #3c6255;
+    font-size: 40px;
+}
+
+.content p {
+    color: black;
+    font-size: 15px;
+    line-height: 30px;
+    max-width: 500px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    background-color: #3c6255;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #3c6255;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navlist {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #fff;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navlist.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .content {
+        align-items: center;
+        border-left: none;
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        width: 70%;
+    }
+
+    .logo::before {
+        font-size: 18px;
+        left: 70px;
+    }
+}
